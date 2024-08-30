@@ -97,18 +97,27 @@ html body del {
 	color: #5c5c5c
 }
 
+
+img{
+	display: block;
+	margin: 1rem auto;
+}
+img+p{
+	text-indent:0;   /* 图片说明文字取消首行空格 */
+	text-align: center;
+}
+
 a:not([href]) {
 	color: inherit;
 	text-decoration: none
 }
 
 a {
-	color: #0098e4;
+	color: #007dbb;
 	text-decoration: none
 }
 a:hover {
-	color: #00a3f5;
-	font-weight: bold;
+	color: #13b0ff;
 	text-decoration: none
 }
 
@@ -117,10 +126,9 @@ h1 ~ * a:hover {
 	text-decoration: none;
 	border-bottom: 0.2em #1bc073 solid ;
 	background-color: #c2ffe3;
-	font-weight: bold;
 }
 
-h1 ~ * a::after {
+h1 ~ * a:not([id])::after {
     content: '';
     display: inline-block;
     width: 1em;
