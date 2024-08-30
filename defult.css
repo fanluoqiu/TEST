@@ -1,19 +1,26 @@
 
   
  html {
+	min-width: 300px;
 	width: 60%;
 	margin: 0 auto;
   }
   
   @media (max-width: 1000px) {
 	html {
-	  width: 80%;
+	  width: 95%;
 	}
   }
   
-  p {
+  p:not(li) {
 	text-indent: 2em; 
-  }
+	
+}
+
+
+p{
+	word-break: break-all;
+}
   
 
 
@@ -90,20 +97,48 @@ html body del {
 	color: #5c5c5c
 }
 
-html body a:not([href]) {
+a:not([href]) {
 	color: inherit;
 	text-decoration: none
 }
 
-html body a {
-	color: #08c;
+a {
+	color: #0098e4;
+	text-decoration: none
+}
+a:hover {
+	color: #00a3f5;
+	font-weight: bold;
 	text-decoration: none
 }
 
-html body a:hover {
-	color: #00a3f5;
-	text-decoration: none
+h1 ~ * a:hover {
+	color: #008848 ;
+	text-decoration: none;
+	border-bottom: 0.2em #1bc073 solid ;
+	background-color: #c2ffe3;
+	font-weight: bold;
 }
+
+h1 ~ * a::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: url('./img/link.svg') no-repeat ;
+    background-size: contain;
+    margin-left: 0.1em;
+}
+
+
+
+
+
+  
+  
+  
+
+
 
 html body img {
 	max-width: 100%
@@ -155,20 +190,20 @@ html body .task-list-item-checkbox:hover {
 }
 
 html body blockquote {
-	margin: 16px 0;
+	margin: 0;
+	padding: 0.8em 0.8em;
 	font-size: inherit;
-	padding: 0 15px;
-	color: #5c5c5c;
-	background-color: #f0f0f0;
-	border-left: 4px solid #d6d6d6
+	color: #523400;
+	background-color: #fcf3e5;
+	border-left: 4px solid #dfa136
 }
 
 html body blockquote>:first-child {
-	margin-top: 0
+	margin-top: 0;
 }
 
 html body blockquote>:last-child {
-	margin-bottom: 0
+	margin-bottom: 0;
 }
 
 html body hr {
@@ -275,7 +310,7 @@ pre:not(.hljs), pre.hljs code > div {
 
 
 
-code[class*=language-] {
+code{
   color: #ffffff;
   font-family: Consolas, 'Courier New', monospace;
   text-align: left;
@@ -293,6 +328,8 @@ code[class*=language-] {
   -ms-hyphens: none;
   hyphens: none;
 }
+
+
 
 
 
