@@ -382,3 +382,47 @@ h6:before {
             counter(h6counter) " ";
 }
 
+
+
+/*目录*/
+
+#toc {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+	overflow-x: auto;
+	text-wrap: nowrap;
+}
+
+.toc-item {
+    margin-left: 20px;
+}
+
+.toc-toggle {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.toc-children {
+    display: none;
+}
+
+.toc-level-2 {
+    margin-left: 20px;
+}
+
+.toc-level-3 {
+    margin-left: 40px;
+}
+
+.toc-level-4 {
+    margin-left: 60px;
+}
+
+.toc-level-5 {
+    margin-left: 80px;
+}
+
+.toc-level-6 {
+    margin-left: 100px;
+}
