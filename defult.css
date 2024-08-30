@@ -1,4 +1,21 @@
 
+  
+  body {
+	width: 60%;
+	margin: 0 auto;
+  }
+  
+  @media (max-width: 1000px) {
+	body {
+	  width: 80%;
+	}
+  }
+  
+  p {
+	text-indent: 2em; 
+  }
+  
+
 
 
 html body {
@@ -9,9 +26,6 @@ html body {
 	background-color: #fff;
 	overflow: initial;
 	box-sizing: border-box;
-	min-width: 600px;
-	max-width: 1000px;
-	margin: auto;
 }
 
 html body>:first-child {
@@ -282,62 +296,6 @@ code[class*=language-] {
 
 
 
-
-
-/*
-From https://raw.githubusercontent.com/isagalaev/highlight.js/master/src/styles/vs.css
-*/
-/*
-
-Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
-
-*/
-
-
-.hljs-number{
-	color:rgb(255, 130, 130);
-}
-
-.hljs-function,
-.hljs-params,
-.hljs-class  {
-  color: inherit;
-}
-
-.hljs-comment,
-.hljs-quote,
-.hljs-class,
-.hljs-variable {
-  color: rgb(110, 200, 110) ;
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-name,
-.hljs-tag {
-  color: rgb(255, 253, 110);
-}
-
-
-.hljs-string,
-.hljs-section,
-.hljs-attribute,
-.hljs-literal,
-.hljs-template-tag,
-.hljs-template-variable,
-.hljs-type {
-  color:  rgb(110, 255, 110);
-}
-
-
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
 
 
 
