@@ -1,12 +1,12 @@
 
   
-  body {
+ html {
 	width: 60%;
 	margin: 0 auto;
   }
   
   @media (max-width: 1000px) {
-	body {
+	html {
 	  width: 80%;
 	}
   }
