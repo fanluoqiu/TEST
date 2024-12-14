@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // 创建 <script> 标签并设置 src 属性
     var script1 = document.createElement('script');
-    script1.src = 'highlight.js';
+    script1.src = 'https://cdn.jsdelivr.net/gh/fanluoqiu/Markdown-html-style/highlight.js';
     
     // 当 highlight.js 加载完成后，初始化 highlight.js
     script1.onload = function() {
