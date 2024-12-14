@@ -1,111 +1,146 @@
+@import url("./monokai.min.css");
 
-  
- html {
+/* 页面响应布局 */
+
+html {
 	min-width: 300px;
-	width: 60%;
+	width: 70%;
 	margin: 0 auto;
-  }
+}
   
-  @media (max-width: 1000px) {
+@media (max-width: 1000px) {
 	html {
-	  width: 95%;
-	}
-  }
-  
-  p:not(li) {
-	text-indent: 2em; 
-	
+		width: 95%;
+	}	
 }
 
+
+/* 正文样式 */
 
 p{
 	word-break: break-all;
+}  
+p:not(li) {
+	text-indent: 2em; 
 }
-  
 
-
-
-html body {
-	font-family: Helvetica Neue,Helvetica,Segoe UI,Arial,freesans,sans-serif;
-	font-size: medium;
-	line-height: 1.6;
+body {
+	font-family: Consolas, 'Courier New', monospace;
+	font-size: 20px;
+	line-height: 1.8em;
 	color: #000000;
 	background-color: #fff;
 	overflow: initial;
 	box-sizing: border-box;
 }
 
-html body>:first-child {
-	margin-top: 0
-}
 
-html body h1,html body h2,html body h3,html body h4,html body h5,html body h6 {
-	line-height: 1.2;
-	margin-top: 1em;
-	margin-bottom: 16px;
+
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+	line-height: 1.5em;
+	margin-top: 0;
+	margin-bottom: 0;
 	color: #000
 }
 
-html body h1 {
+body h1 {
 	font-size: 2.25em;
-	font-weight: 300;
+	font-weight:bolder;
 	padding-bottom: .3em
 }
 
-html body h2 {
+body h2 {
 	font-size: 1.75em;
-	font-weight: 400;
+	font-weight: bolder;
 	padding-bottom: .3em
 }
 
 html body h3 {
 	font-size: 1.5em;
-	font-weight: 500
+	font-weight: bolder;
 }
 
 html body h4 {
 	font-size: 1.25em;
-	font-weight: 600
+	font-weight: bolder;
+
 }
 
 html body h5 {
 	font-size: 1.1em;
-	font-weight: 600
+	font-weight: bolder;
+
 }
 
 html body h6 {
-	font-size: 1em
+	font-size: 1em;
+	font-weight: bolder;
 }
-
-html body h1,html body h2,html body h3,html body h4,html body h5,html body h6 {
-	font-weight: 600
-}
-
-html body h5 {
-	font-size: 1em
-}
-
-html body h6 {
-	color: #5c5c5c
-}
-
-html body strong {
-	color: #000
-}
-
-html body del {
-	color: #5c5c5c
-}
-
 
 img{
 	display: block;
+	width: auto;
+	max-height: 500px;
+	cursor:zoom-in;
 	margin: 1rem auto;
+	transition: all 1s 0.1; 
 }
+
+
+
+
+
 img+p{
 	text-indent:0;   /* 图片说明文字取消首行空格 */
 	text-align: center;
 }
+
+
+/* 模态框样式 */
+.modal {
+	display: none;  /* 默认隐藏 */
+	position: fixed;  /* 固定定位 */
+	z-index: 9999;  /* 确保覆盖所有内容 */
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.8);  /* 半透明黑色背景 */
+	justify-content: center;  /* 水平居中 */
+	align-items: center;  /* 垂直居中 */
+}
+
+/* 模态框中的图片样式 */
+.modal-image {
+	display: block;
+	width: 100%;
+	max-height: 100%;
+	object-fit: contain; 
+	margin: auto;  /* 居中显示 */
+}
+
+
+
+/* 在 CSS 中定义模态框关闭按钮的样式 */
+.close-button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    background-image: url("./img/close.svg");  /* 设置背景图 */
+    background-size: cover;  /* 确保图标适应按钮尺寸 */
+    background-position: center;  /* 居中显示图标 */
+    border: none;  /* 去掉边框 */
+    background-color: transparent;  /* 背景透明 */
+}
+
+
+
+
+
 
 a:not([href]) {
 	color: inherit;
@@ -138,13 +173,6 @@ h1 ~ * a:not([id])::after {
     margin-left: 0.1em;
 }
 
-
-
-
-
-  
-  
-  
 
 
 
@@ -259,89 +287,19 @@ html body dl dd {
 	margin-bottom: 16px
 }
 
-html body code {
-	font-family: Menlo,Monaco,Consolas,Courier New,monospace;
-	font-size: .85em;
-	color: #ffffff;
-	background-color: #000000;
-	border-radius: 3px;
-	padding: .2em 0
+
+
+code[class]{
+	font-family: Consolas, 'Courier New', monospace;
+	margin-left: 3rem;
+	margin-right:3rem ;
+	border-radius: 0.5rem;
+	box-shadow: #0000004b 0px 0px 5px;
 }
 
-
-
-
-
-
-html body pre code,html body pre tt {
-	display: inline;
-	max-width: none;
-	padding: 0;
-	margin: 0;
-	overflow: initial;
-	line-height: inherit;
-	word-wrap: normal;
-	background-color: transparent;
-	border: 0
+code {
+	background-color: #d6d6d6;
 }
-
-html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before {
-	content: normal
-}
-
-html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul {
-	margin-top: 0;
-	margin-bottom: 16px
-}
-
-html body kbd {
-	color: #000;
-	border: 1px solid #d6d6d6;
-	border-bottom: 2px solid #c7c7c7;
-	padding: 2px 4px;
-	background-color: #f0f0f0;
-	border-radius: 3px
-}
-
-
-
-
-
-pre:not(.hljs), pre.hljs code > div {
-    border-radius: 6px;
-	background-color: #000000 ;
-	box-shadow: 0 0 10px rgb(179, 179, 179);
-	padding: 1rem;
-    overflow: auto;
-}
-
-
-
-
-code{
-  color: #ffffff;
-  font-family: Consolas, 'Courier New', monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;   
-  font-size: 1em;
-  line-height: 1.4;
-  -moz-tab-size: 8;
-  -o-tab-size: 8;
-  tab-size: 8;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-
-
-
-
-
 
 
 
